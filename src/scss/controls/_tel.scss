@@ -1,0 +1,31 @@
+.tel {
+  @include flex-v-center;
+
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  color: var(--ui-light-orange);
+
+  &__icon {
+    fill: var(--ui-light-orange);
+
+    &--m {
+      width: 22px;
+      height: 22px;
+    }
+
+    &--s {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--m {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &--s {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

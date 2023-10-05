@@ -1,0 +1,28 @@
+/* stylelint-disable */
+// base
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// vendor-components
+@import "./vendor/map";
+@import "./vendor/validate";
+
+// components
+@import "./controls/form";
+@import "./controls/btn";
+@import "./controls/hashtag";
+@import "./controls/nav";
+@import "./controls/burger";
+@import "./controls/tile";
+@import "./controls/mobile-menu";
+@import "./controls/tel";
+
+// partials
+@import "./partials/header";
+@import "./partials/hero";
+@import "./partials/about";
+@import "./partials/projects";
+@import "./partials/contacts";
+@import "./partials/footer";

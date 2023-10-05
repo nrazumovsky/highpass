@@ -1,0 +1,279 @@
+.hero-tile {
+  position: relative;
+  display: flex;
+  padding: 15px 17px 60px 60px;
+  background-color: var(--light-gray);
+
+  &__hashtag {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 5;
+  }
+
+  &__container {
+    @include flex-col-start;
+
+    justify-content: flex-end;
+  }
+
+  &__pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  &__img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__label {
+    position: relative;
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--ui-white);
+
+    @include d-1365 {
+      margin-bottom: 9px;
+    }
+
+    @include t-962 {
+      margin-bottom: 16px;
+    }
+
+    @include t-576 {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 19px;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 104%;
+    color: var(--ui-white);
+
+    @include d-1365 {
+      font-size: 34px;
+      line-height: 100%;
+    }
+
+    @include t-962 {
+      margin-bottom: 23px;
+      line-height: 90%;
+    }
+
+    @include t-576 {
+      margin-bottom: 12px;
+      max-width: 65%;
+      font-size: 24px;
+      line-height: 110%;
+    }
+  }
+
+  @include d-1365 {
+    padding: 15px 15px 30px 30px;
+  }
+
+  @include t-576 {
+    grid-column: 2 span;
+    padding: 6px 13px 30px 30px;
+  }
+}
+
+.tile {
+  position: relative;
+
+  &:nth-of-type(-n + 3) {
+    grid-column: 2 span;
+  }
+
+  &:nth-of-type(4) {
+    grid-column: 6 span;
+  }
+
+  &:nth-of-type(5) {
+    grid-column: 6 span;
+  }
+
+  &:nth-last-of-type(-n + 2) {
+    grid-column: 3 span;
+  }
+
+  &__icon {
+    margin-right: 4px;
+    width: 14px;
+    height: 14px;
+    fill: var(--ui-gray);
+  }
+
+  &__hashtag {
+    position: absolute;
+    right: 5px;
+    top: 6px;
+
+    @include t-576 {
+      padding: 4px 16px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 12px;
+  }
+
+  &__desc {
+    display: box;
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: 60px;
+    line-height: 22px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  &__date {
+    @include flex-v-center;
+
+    margin-bottom: 2px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: var(--ui-gray);
+
+    &--white {
+      color: var(--ui-white);
+    }
+  }
+
+  &__btn {
+    position: relative;
+  }
+
+  @include t-1024 {
+    &:nth-of-type(3) {
+      grid-column: 4 span;
+    }
+
+    &:nth-of-type(4) {
+      grid-column: 5 span;
+    }
+
+    &:nth-of-type(5) {
+      order: 8;
+      grid-column: 5 span;
+    }
+
+    &:nth-of-type(6) {
+      grid-column: 3 span;
+    }
+
+    &:nth-of-type(7) {
+      grid-column: 3 span;
+    }
+  }
+
+  @include t-768 {
+    &:nth-of-type(-n + 3) {
+      grid-column: 2 span;
+    }
+
+    &:nth-of-type(4) {
+      grid-column: 6 span;
+    }
+
+    &:nth-of-type(5) {
+      order: 8;
+      grid-column: 6 span;
+    }
+
+    &:nth-last-of-type(-n + 2) {
+      grid-column: 3 span;
+    }
+  }
+
+  @include t-576 {
+    &:nth-of-type(-n + 3) {
+      grid-column: 2 span;
+    }
+
+    &:nth-of-type(4) {
+      grid-column: 2 span;
+    }
+
+    &:nth-of-type(5) {
+      order: 8;
+      grid-column: 2 span;
+    }
+
+    &:nth-last-of-type(-n + 2) {
+      grid-column: 2 span;
+    }
+  }
+}
+
+.tile-display {
+  grid-column: 6 span;
+  min-height: 300px;
+
+  &__container {
+    @include flex-col-start;
+
+    position: relative;
+    padding: 22px 29px 29px;
+    height: 100%;
+  }
+
+  &__pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__text {
+    position: relative;
+    color: var(--ui-white);
+  }
+
+  &__title {
+    margin-bottom: 6px;
+  }
+
+  &__desc {
+    margin-bottom: auto;
+    max-width: 288px;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    fill: var(--ui-white);
+  }
+
+  @include t-576 {
+    min-height: 422px;
+
+    &__container {
+      justify-content: flex-end;
+    }
+
+    &__desc {
+      margin-bottom: 16px;
+    }
+  }
+}

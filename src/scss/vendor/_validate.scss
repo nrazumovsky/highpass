@@ -1,0 +1,20 @@
+.about__form {
+  .just-validate-error-label {
+    color: var(--ui-light-red) !important;
+  }
+}
+
+.contacts__form {
+  .just-validate-error-label {
+    color: var(--ui-red) !important;
+  }
+}
+
+.just-validate-error-label {
+  position: absolute;
+  left: 23px;
+  top: 3px;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+}

@@ -1,0 +1,29 @@
+.projects {
+  margin-bottom: 74px;
+
+  &__section-title {
+    margin-bottom: 14px;
+
+    @include t-576 {
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+
+  &__content {
+    @include grid-12-30;
+
+    @include t-1024 {
+      grid-auto-flow: dense;
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include t-768 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include t-576 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.footer {
+  padding: 25px 0 14px;
+  background-color: var(--ui-black);
+
+  &__container {
+    @include flex;
+
+    justify-content: flex-start;
+
+    @include t-576 {
+      flex-flow: column-reverse;
+      padding: 0;
+    }
+  }
+
+  &__block-logo {
+    margin-right: 201px;
+
+    @include t-1024 {
+      margin-right: 136px;
+    }
+
+    @include t-962 {
+      margin-right: auto;
+    }
+
+    @include t-576 {
+      @include flex;
+
+      flex-flow: column;
+      align-items: center;
+      padding: 14px 0;
+      width: 100%;
+      background-color: var(--ui-dark-gray);
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 2px;
+
+    @include t-1024 {
+      width: 166px;
+    }
+
+    @include t-576 {
+      width: 111px;
+    }
+  }
+
+  &__block-quote {
+    margin-right: auto;
+    max-width: 361px;
+
+    @include t-962 {
+      display: none;
+    }
+  }
+
+  &__copyright {
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--ui-white);
+  }
+
+  &__quote {
+    color: var(--ui-light-gray);
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+  }
+
+  &__social-block {
+    @include flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-self: end;
+
+    @include t-576 {
+      padding: 31px 0 32px;
+    }
+  }
+
+  &__social-title {
+    display: block;
+    margin-bottom: 11px;
+    color: var(--ui-light-gray);
+  }
+
+  &__social-icon {
+    width: 30px;
+    height: 30px;
+    fill: var(--ui-light-gray);
+    transition: fill 0.25s ease-in-out;
+
+    &:focus-visible {
+      fill: var(--ui-dark-orange);
+    }
+
+    &:hover {
+      fill: var(--ui-light-orange);
+    }
+
+    &:active {
+      fill: var(--ui-orange);
+    }
+  }
+
+  &__mobile {
+    display: none;
+    padding: 14px 0;
+    background-color: var(--ui-dark-gray);
+
+    @include t-576 {
+      display: block;
+    }
+  }
+
+  &__mobile-container {
+    @include flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__mobile-logo {
+    width: 111px;
+  }
+
+  @include t-576 {
+    padding: 0;
+  }
+}

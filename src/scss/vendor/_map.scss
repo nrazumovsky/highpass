@@ -1,0 +1,29 @@
+#map {
+  height: 460px;
+}
+
+.map {
+  position: relative;
+  grid-column: 8 span;
+
+  @include t-1024 {
+    grid-column: 5 span;
+  }
+
+  @include t-962 {
+    grid-column: 6 span;
+  }
+
+  @include t-576 {
+    grid-column: 2 span;
+    margin: 0 -21px;
+  }
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+[class*="copyrights-pane"] {
+  display: none;
+}

@@ -1,0 +1,113 @@
+.contacts {
+  margin-bottom: 71px;
+
+  &__application {
+    grid-column: 4 span;
+
+    @include t-1024 {
+      grid-column: 3 span;
+    }
+
+    @include t-962 {
+      grid-column: 4 span;
+    }
+
+    @include t-576 {
+      grid-column: 2 span;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__content {
+    @include grid-12-30;
+
+    position: relative;
+    align-items: end;
+    font-size: 0;
+
+    @include t-1024 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include t-962 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include t-576 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__panel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+    padding: 175px 70px 150px 60px;
+    max-width: 410px;
+    max-height: 460px;
+    background-color: var(--ui-black-85);
+
+    @include t-1024 {
+      padding: 24px 260px 19px 32px;
+      max-width: 100%;
+    }
+
+    @include t-962 {
+      padding: 24px 260px 19px 32px;
+    }
+
+    @include t-576 {
+      padding: 24px 18px 19px;
+      max-width: 576px;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  &__panel-title {
+    margin-bottom: 5px;
+
+    @include t-576 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__panel-address {
+    margin-bottom: 2px;
+    line-height: 28px;
+    color: var(--ui-light-gray);
+
+    @include t-576 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__application-title {
+    margin-bottom: 5px;
+    color: var(--ui-black);
+  }
+
+  &__application-desc {
+    margin-bottom: 14px;
+    color: var(--ui-gray);
+  }
+
+  &__form {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  &__form-btn {
+    justify-self: start;
+  }
+}

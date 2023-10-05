@@ -1,0 +1,136 @@
+.about {
+  margin-bottom: 71px;
+
+  &__container {
+    padding-top: 34px;
+    padding-bottom: 69px;
+    background-color: var(--ui-black);
+
+    @include t-1024 {
+      padding-bottom: 82px;
+    }
+
+    @include t-962 {
+      padding-bottom: 71px;
+    }
+
+    @include t-576 {
+      margin-bottom: 0;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__content {
+    @include grid-12-30;
+
+    align-items: end;
+
+    @include t-1024 {
+      align-items: flex-start;
+    }
+
+    @include t-576 {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: var(--row-gap-18);
+    }
+  }
+
+  &__infoblock {
+    grid-column: 6 span;
+
+    @include t-576 {
+      grid-column: 2 span;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    color: var(--ui-white);
+
+    @include t-576 {
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+
+  &__desc {
+    line-height: 28px;
+    color: var(--ui-light-gray);
+
+    @include t-576 {
+      margin-bottom: 18px;
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+
+  &__subscribe {
+    grid-column: 6 span;
+
+    @include t-576 {
+      grid-column: 2 span;
+    }
+  }
+
+  &__pic {
+    font-size: 0;
+  }
+
+  &__img {
+    margin-bottom: 20px;
+
+    @include t-576 {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__subscribe-title {
+    margin-bottom: 16px;
+    color: var(--ui-white);
+
+    @include t-576 {
+      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 126px;
+    gap: var(--gap);
+
+    @include t-1024 {
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--gap-form);
+    }
+  }
+
+  &__label {
+    @include t-1024 {
+      grid-column: 3 span;
+    }
+
+    @include t-962 {
+      grid-column: 4 span;
+    }
+  }
+
+  &__btn {
+    @include t-1024 {
+      grid-row-start: 2;
+    }
+  }
+
+  @include t-1024 {
+    margin-bottom: 73px;
+  }
+
+  @include t-962 {
+    margin-bottom: 73px;
+  }
+
+  @include t-576 {
+    margin-bottom: 50px;
+  }
+}

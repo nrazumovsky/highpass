@@ -1,0 +1,98 @@
+.header {
+  margin-bottom: 41px;
+
+  &__content {
+    padding: 25px 0;
+    background-color: var(--ui-black);
+
+    @include t-576 {
+      padding: 23px 0;
+    }
+  }
+
+  &__container {
+    @include flex-v-center;
+
+    position: relative;
+  }
+
+  &__logo {
+    margin-right: 135px;
+    font-size: 0;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    @include d-1365 {
+      margin-right: 78px;
+      width: 166px;
+    }
+
+    @include t-962 {
+      margin-right: auto;
+    }
+
+    @include t-576 {
+      margin-right: auto;
+      width: 111px;
+    }
+  }
+
+  &__btn {
+    padding: 0;
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    fill: var(--ui-white);
+    transition: fill 0.25s ease-in-out;
+
+    &:focus-visible {
+      outline: none;
+      fill: var(--ui-dark-orange);
+    }
+
+    &:hover {
+      outline: none;
+      fill: var(--ui-light-orange);
+    }
+
+    &:active {
+      outline: none;
+      fill: var(--ui-orange);
+    }
+
+    @include t-576 {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__mobile {
+    background-color: var(--ui-dark-gray);
+  }
+
+  &__mobile-content {
+    display: none;
+
+    @include t-962 {
+      display: block;
+    }
+
+    @include t-576 {
+      display: flex;
+      align-items: center;
+      min-height: 45px;
+    }
+  }
+
+  @include t-1024 {
+    margin-bottom: 35px;
+  }
+
+  @include t-576 {
+    margin-bottom: 30px;
+  }
+}
